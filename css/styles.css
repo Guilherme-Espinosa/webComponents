@@ -1,3 +1,7 @@
+body {
+    background-color:rgb(42, 47, 53) ;
+}
+
 .card{
     width: 80%;
     background-color: antiquewhite;
@@ -29,6 +33,8 @@ img {
 
 .card__left span {
     font-weight: 400;
+    font-style: italic;
+    padding: .312rem;
 }
 
 .card__left a {
@@ -41,4 +47,5 @@ img {
 
 .card__left p {
     color: rgb(43, 43, 43);
+    padding: .312rem;
 }
