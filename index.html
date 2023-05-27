@@ -1,20 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Diário Galáctico</title>
-    <!-- Our CSS -->
-    <link rel="stylesheet" href="./css/styles.css">
-    <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/responsive.css">
-    <script src="./src/component/cardNews.js" defer></script>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Diário Galáctico</title>
+        <!-- Our CSS -->
+        <link rel="stylesheet" href="./css/styles.css">
+        <link rel="stylesheet" href="./css/reset.css">
+        <link rel="stylesheet" href="./css/responsive.css">
+        <!-- Our JS -->
+        <script src="./src/components/TituloDinamico.js" defer></script>
+        <script src="./src/components/CardNews.js" defer></script>
+    </head>
 
 <body>
     <div class="container">
-
+        
         <div class="card">
             <div class="card__left">
                 <span>Por: Sith Espinosa</span>
@@ -29,6 +31,8 @@
     </div>
 
     <card-news></card-news>
+    <titulo-dinamico titulo="Notícia urgente"></titulo-dinamico>
+    
 </body>
 
 </html>
