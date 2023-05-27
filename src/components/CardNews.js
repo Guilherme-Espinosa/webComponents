@@ -20,25 +20,33 @@ class CardNews extends HTMLElement {
             const cardLeft = document.createElement("div");
             cardLeft.setAttribute("class", "card__left");
 
-                // Criando as divs mais internas da div "cardLeft".
+                // Criando as divs "span", "a" e "p", filhas da div "cardLeft" e setando as props/atrinutos delas para serem usadas dinâmicamente através do HTML.
                 const spanAutor = document.createElement("span");
-                const aTitulo = document.createElement("a");
-                const pChamadaMateria = document.createElement("p");
+                spanAutor.textContent = "By " + (this.getAttribute("autor") || "Anonymous ");
+
+                const linkTitle = document.createElement("a");
+                linkTitle.textContent = this.getAttribute("title");
+                // Aqui vamos permitir a utilização de uma prop já existente.
+                linkTitle.href = this.getAttribute("link-url") || "https://www.safesite.com/";
+
+                const newsContent = document.createElement("p");
+                newsContent.textContent = this.getAttribute("text");
 
                 // Ligando as divs menores ("span", "a" e "p") à div superior/pai ("div" de class "cardLeft").
                 cardLeft.appendChild(spanAutor);
-                cardLeft.appendChild(aTitulo);
-                cardLeft.appendChild(pChamadaMateria);
+                cardLeft.appendChild(linkTitle);
+                cardLeft.appendChild(newsContent);
 
             // Criando a div "cardRight" e setando os atributos dela para depois vincular ela à div "card"/componentRoot.
             const cardRight = document.createElement("div");
             cardRight.setAttribute("class", "card__right");
 
-                const img = document.createElement("img");
-                img.setAttribute("src", "./assets/imagem.png");
-                img.setAttribute("alt", "texto descritivo da imagem selecionada.");
+                const newsImage = document.createElement("img");
+                newsImage.src = this.getAttribute("photo") || "./assets/default-photo.png"
+                newsImage.alt = this.getAttribute("alt") || "Descrição da imagem."
+                // Obsservação: Procurar sempre tornar os components inteligentes e automatizados para que trabalhem preenchendo seus campos no que for necessário em caso de o usuário não preencher os dados de entrada. Os exemplos de uma ação automática estão onde declaramos um "his.getAttribute("") || "Ação alternativa".
 
-                cardRight.appendChild(img);
+                cardRight.appendChild(newsImage);
         // Pendurando os cards left e right no componentRoot, que é a div raiz/pai de todas as posterioes e que, por sua vez, está pendurada diretamente na shadow DOM criada.
         componentRoot.appendChild(cardLeft);
         componentRoot.appendChild(cardRight);

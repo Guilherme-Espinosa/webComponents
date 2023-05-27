@@ -1,37 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Diário Galáctico</title>
-        <!-- Our CSS -->
-        <link rel="stylesheet" href="./css/styles.css">
-        <link rel="stylesheet" href="./css/reset.css">
-        <link rel="stylesheet" href="./css/responsive.css">
-        <!-- Our JS -->
-        <script src="./src/components/TituloDinamico.js" defer></script>
-        <script src="./src/components/CardNews.js" defer></script>
-    </head>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diário Galáctico</title>
+    <!-- Our CSS -->
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+    <!-- Our JS -->
+    <script src="./src/components/TituloDinamico.js" defer></script>
+    <script src="./src/components/CardNews.js" defer></script>
+</head>
 
 <body>
     <div class="container">
-        
+
         <div class="card">
             <div class="card__left">
                 <span>Por: Sith Espinosa</span>
-                <a href="#">Darth Vader está contratando Devs SkyScript para trabalharem na Estrela da Morte!</a href="#">
-                <p>Em uma reviravolta surpreendente, Darth Vader, o icônico Lorde Sith, anunciou hoje que está em busca de talentosos desenvolvedores para se juntarem à sua equipe na Estrela da Morte.</p>
+                <a href="#">Darth Vader está contratando Devs SkyScript para trabalharem na Estrela da Morte!</a
+                    href="#">
+                <p>Em uma reviravolta surpreendente, Darth Vader, o icônico Lorde Sith, anunciou hoje que está em busca
+                    de talentosos desenvolvedores para se juntarem à sua equipe na Estrela da Morte.</p>
             </div>
             <div class="card__right">
-                <img src="./assets/pngwing.com.png" alt="imagem estática, no estilo de desenho em quadrinhos, em que Darth Vader aparece em primeiro plano e a estrela da morte fica logo aatrás dele." srcset="">
+                <img src="./assets/pngwing.com.png"
+                    alt="imagem estática, no estilo de desenho em quadrinhos, em que Darth Vader aparece em primeiro plano e a estrela da morte fica logo aatrás dele."
+                    srcset="">
             </div>
         </div>
 
     </div>
 
-    <card-news></card-news>
-    
+    <!-- Aqui temos uma tag customizada (nosso component criado), onde podemos preencher os dados da tag através dos atributos (ou "Props", como são mais conhecidas) que também foram criados específicamente pra ela. -->
+    <card-news
+        autor=""
+        title="Capitão Kirk, da Frota Estelar, busca talentosos desenvolvedores para missões intergalácticas"
+        link-url="www.linkaqui.com/"
+        photo="https://t.ctcdn.com.br/8m-4XrqbJkeGitkZe_J1uzMZuGI=/1200x675/smart/filters:format(webp)/i375300.jpeg"
+        alt="Foto de perfil do Capitão Kirk."
+        text="Os interessados devem possuir uma paixão pelo desconhecido, uma mente inquisitiva e habilidades técnicas excepcionais. O Capitão Kirk valoriza a diversidade e incentiva candidaturas de todas as espécies e origens. Se você é um desenvolvedor destemido, com visão de futuro e está pronto para embarcar em uma jornada intergaláctica, envie seu currículo estelar para o Capitão Kirk pelo site da Frota Estelar. Prepare-se para uma aventura única nos confins do espaço!">
+    </card-news>
+
 </body>
 
 </html>
