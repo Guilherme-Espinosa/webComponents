@@ -30,7 +30,7 @@ class CardNews extends HTMLElement {
                 linkTitle.href = this.getAttribute("link-url") || "https://www.safesite.com/";
 
                 const newsContent = document.createElement("p");
-                newsContent.textContent = this.getAttribute("text");
+                newsContent.textContent = this.getAttribute ("text");
 
                 // Ligando as divs menores ("span", "a" e "p") à div superior/pai ("div" de class "cardLeft").
                 cardLeft.appendChild(spanAutor);
@@ -54,7 +54,63 @@ class CardNews extends HTMLElement {
         return componentRoot
     }
     styles(){
+        const style = document.createElement("style");
+        style.textContent = `
+        .card{
+            width: 80%;
+            margin: .5rem;
+            background-color: antiquewhite;
+            border: 1px solid grey;
+            border-radius: .3rem;
+            -webkit-box-shadow: 21px 18px 7px -11px rgba(0,0,0,0.75);
+            -moz-box-shadow: 21px 18px 7px -11px rgba(0,0,0,0.75);
+            box-shadow: 21px 18px 7px -11px rgba(0,0,0,0.75);
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
         
+        /* .card__left, .card__right {
+            border: 1px solid blue;
+        } */
+        
+        img {
+            height: 7rem;
+            width: 10rem;
+            background-color: black;
+            margin: .3rem;
+            border-radius: .3rem
+        }
+        
+        .card__left {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-left: .625rem;
+        }
+        
+        .card__left span {
+            font-weight: 400;
+            font-style: italic;
+            padding: .312rem;
+        }
+        
+        .card__left a {
+            margin: 1rem;
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-decoration: none;
+            color: black;
+        }
+        
+        .card__left p {
+            color: rgb(43, 43, 43);
+            padding: .312rem;
+            text-align: justify;
+        }
+        `
+
+        return style
     }
 
 }

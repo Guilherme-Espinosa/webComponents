@@ -1,11 +1,15 @@
+/* Todos os styles codificados aqui e aplicados ao card e seus descendentes, foram simplesmente copiados pra dentro do "CardNews.js", automatizando assim toda a estilização do card de notícias e tornando o código muito mais limpo, reutilizavel e aumentando a escalabilidade, pois até o código dessa página pode ser apagado que as notícias que tiverem sido criadas utilizando o component "CardNews" não serão afetadas. */
+
 body {
     background-color:rgb(42, 47, 53) ;
 }
 
 .card{
     width: 80%;
+    margin: .5rem;
     background-color: antiquewhite;
-    /* border: 1px solid grey; */
+    border: 1px solid grey;
+    border-radius: .3rem;
     -webkit-box-shadow: 21px 18px 7px -11px rgba(0,0,0,0.75);
     -moz-box-shadow: 21px 18px 7px -11px rgba(0,0,0,0.75);
     box-shadow: 21px 18px 7px -11px rgba(0,0,0,0.75);
@@ -20,8 +24,10 @@ body {
 
 img {
     height: 7rem;
+    width: 10rem;
     background-color: black;
     margin: .3rem;
+    border-radius: .3rem;
 }
 
 .card__left {
@@ -48,4 +54,5 @@ img {
 .card__left p {
     color: rgb(43, 43, 43);
     padding: .312rem;
+    text-align: justify;
 }
